@@ -1,0 +1,44 @@
+.icon {
+  display: block;
+
+  width: 24px;
+  height: 24px;
+
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  @include on-tablet {
+    width: 32px;
+  height: 32px;
+  }
+
+  &--menu {
+    background-image: url(../img/icons/icon-burger-menu.svg);
+
+    &:hover {
+      background-image: url(../img/icons/icon-burger-menu-hover.svg);
+
+      @include hover(transform, scale(1.2));
+    }
+  }
+
+  &--currency {
+    background-image: url(../img/icons/icon-currency.svg);
+
+    @include hover(transform, scale(1.2));
+  }
+
+  &--language {
+    background-image: url(../img/icons/icon-language.svg);
+
+    @include hover(transform, scale(1.2));
+  }
+
+  &--cart {
+    background-image: url(../img/icons/icon-cart.svg);
+
+    @include hover(transform, scale(1.2));
+  }
+
+}

@@ -1,0 +1,37 @@
+.top-bar {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  height: 100px;
+  background-color: $top-bar-background-color;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+
+  @include content-padding-inline;
+
+  &__logo {
+    height: 75px;
+    user-select: none;
+
+    @include hover(transform, scale(1.2));
+
+    @include on-tablet {
+      height: 90px;
+    }
+  }
+
+  &__logo-link {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+
+  &__icons--left,
+  &__icons--right {
+    display: flex;
+    align-items: center;
+    gap: 24px; // расстояние между иконками
+  }
+}
