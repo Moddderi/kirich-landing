@@ -1,15 +1,26 @@
-<!-- #region Head -->
+<!-- #region head -->
 <!doctype html>
 <html lang="en" class="page">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>K.I.RICH</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./styles/style.scss" />
     <script src="scripts/main.js" defer></script>
   </head>
   <!-- #endregion -->
   <body class="page__body">
+    <!-- #region header -->
     <header class="header">
       <div class="header__content">
         <div class="top-bar">
@@ -22,7 +33,7 @@
           <!-- LOGO -->
           <a class="top-bar__logo-link" href="#">
             <img
-              src="./img/kirich-logo-mini.png"
+              src="./img/logo-mini.png"
               alt="Kirich logo"
               class="top-bar__logo"
             />
@@ -32,20 +43,65 @@
             <a class="icon icon--cart" href="#"></a>
           </div>
         </div>
-
-        <!-- <h1>dsadsasdas  </h1> -->
       </div>
 
       <div class="header__pictures">
-        <div class="header__picture header__picture--type-standart">
+        <a href="#" class="header__picture header__picture--type-standart">
           <div class="header__label">STANDARD</div>
-        </div>
-        <div class="header__picture header__picture--type-latin">
+        </a>
+
+        <a href="#" class="header__picture header__picture--type-latin">
           <div class="header__label">LATINA</div>
-        </div>
+        </a>
       </div>
 
-      <h1>dsasdasd</h1>
+      <aside id="menu" class="page__menu menu">
+        <div class="top-bar menu__top">
+          <a href="#" class="top-bar__logo-link">
+            <img
+              src="./img/logo-dark.svg"
+              alt="Kirich logo"
+              class="top-bar__logo"
+            />
+          </a>
+          <a href="#" class="menu__icon icon icon--close"></a>
+        </div>
+
+        <div class="menu__bottom">
+          <div class="nav menu__nav">
+            <ul class="nav__list">
+              <li class="nav__item">
+                <a class="nav__link" href="#">
+                  <span class="nav__text">Індивідуальне пошиття</span>
+                </a>
+              </li>
+              <li class="nav__item">
+                <a class="nav__link" href="#">
+                  <span class="nav__text">Одяг в наявності</span>
+                </a>
+              </li>
+            </ul>
+
+            <div class="nav__black-line"></div>
+
+            <ul class="nav__list">
+              <li class="nav__item">
+                <a class="nav__link" href="#">
+                  <span class="icon icon--acount"></span>
+                  <span class="nav__text">МІЙ АКАУНТ</span>
+                  <span class="icon icon--arrow-down"></span>
+                </a>
+              </li>
+              <li class="nav__item">
+                <a class="nav__link" href="#">
+                  <span class="nav__text">Як з нами зв’язатись </span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </aside>
     </header>
+    <!-- #endregion -->
   </body>
 </html>

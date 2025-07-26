@@ -10,7 +10,7 @@
 
   @include on-tablet {
     width: 32px;
-  height: 32px;
+    height: 32px;
   }
 
   &--menu {
@@ -21,6 +21,12 @@
 
       @include hover(transform, scale(1.2));
     }
+  }
+
+  &--close {
+    background-image: url(../img/icons/icon-close.svg);
+
+    @include hover(transform, scale(1.2));
   }
 
   &--currency {
@@ -41,4 +47,23 @@
     @include hover(transform, scale(1.2));
   }
 
+  &--acount {
+    background-image: url(../img/icons/acount.svg);
+
+    @include hover(transform, scale(1.2));
+
+    width: 24px;
+    height: 24px;
+  }
+
+  &--arrow-down {
+    background-image: url(../img/icons/arrow-down.svg);
+
+    @include hover(transform, scale(1.2));
+
+    width: 16px;
+    height: 16px;
+    margin-left: 4px;
+
+  }
 }

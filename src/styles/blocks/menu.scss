@@ -1,0 +1,22 @@
+.menu {
+  box-sizing: border-box;
+  height: 100vh;
+
+  font-weight: 600;
+  color: $menu-text-color;
+  text-transform: uppercase;
+
+  background: $menu-background-color;
+
+  &__top {
+    margin-bottom: 24px;
+
+    @include on-tablet {
+      margin-bottom: 8px;
+    }
+  }
+
+  &__nav {
+    margin-bottom: 40px;
+  }
+}
