@@ -1,4 +1,6 @@
 .menu {
+    overflow-y: auto;  // Добавляем вертикальную прокрутку
+
   box-sizing: border-box;
   height: 100vh;
 
@@ -7,8 +9,6 @@
   text-transform: uppercase;
 
   background: $menu-background-color;
-
-    overflow-y: auto;  // Добавляем вертикальную прокрутку
 
 
   &__top {
