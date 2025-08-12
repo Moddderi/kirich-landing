@@ -1,108 +1,68 @@
 .header {
   display: flex;
   flex-direction: column;
-}
 
-// .header__content {
-//   // при необходимости стилизуй обёртку под top-bar
-// }
+  &__pictures {
+    display: flex;
+    width: 100%;
+    height: calc(100vh - 100px); // 100px = высота .top-bar
+  }
 
-.top-bar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 100px;
-  background-color: $top-bar-background-color;
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+  &__picture {
+    position: relative;
+    flex: 1;
+    background-size: cover;
+    background-position: top center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    overflow: hidden;
 
-  @include content-padding-inline;
+    &::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-color: rgba(0, 0, 0, 0); // прозрачный
+      transition: background-color 0.3s ease;
+      z-index: 1;
+      pointer-events: none;
+    }
 
-  &__logo {
-    height: 75px;
-    user-select: none;
-
-    @include hover(transform, scale(1.2));
-
-    @include on-tablet {
-      height: 90px;
+    &:hover::after {
+      background-color: rgba(0, 0, 0, 0.25); // затемнение при наведении
     }
   }
 
-  &__logo-link {
+  // Модификаторы типа
+  &__picture--type-standart {
+    background-image: url("../img/header-left-standart.svg");
+  }
+
+  &__picture--type-latin {
+    background-image: url("../img/header-right-latin.svg");
+  }
+
+  &__label {
     position: absolute;
+    bottom: 33%;
     left: 50%;
     transform: translateX(-50%);
+    z-index: 2;
+    color: $header-text-color;
+    font-size: 28px;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-shadow: 0 0 8px rgba(0, 0, 0, 0.7);
+    pointer-events: auto;
+    cursor: pointer;
+
+    @include on-tablet {
+      font-size: 48px;
+    }
+
+    @include on-desktop {
+      font-size: 68px;
+    }
+
+    @include hover(transform, translateX(-50%) scale(1.2));
   }
-
-  &__icons--left,
-  &__icons--right {
-    display: flex;
-    align-items: center;
-    gap: 24px;
-  }
-}
-
-.header__pictures {
-  display: flex;
-  width: 100%;
-  height: calc(100vh - 100px); // 100px = высота .top-bar
-}
-
-.header__picture {
-  position: relative;
-  flex: 1;
-  background-size: cover;
-  background-position: top center;
-  background-repeat: no-repeat;
-  cursor: pointer;
-  overflow: hidden;
-
-  &::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background-color: rgba(0, 0, 0, 0); // прозрачный
-    transition: background-color 0.3s ease;
-    z-index: 1;
-    pointer-events: none;
-  }
-
-  &:hover::after {
-    background-color: rgba(0, 0, 0, 0.25); // затемнение при наведении
-  }
-}
-
-// Модификаторы типа
-.header__picture--type-standart {
-  background-image: url("../img/header-left-standart.svg");
-}
-
-.header__picture--type-latin {
-  background-image: url("../img/header-right-latin.svg");
-}
-
-
-.header__label {
-  position: absolute;
-  bottom: 33%;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 2;
-  color: $header-text-color;
-  font-size: 28px;
-  font-weight: 600;
-  text-transform: uppercase;
-  text-shadow: 0 0 8px rgba(0, 0, 0, 0.7);
-  pointer-events: auto;
-  cursor: pointer;
-
-  @include on-tablet {
-    font-size: 48px;
-  }
-
-  @include on-desktop {
-    font-size: 68px;
-  }
-
-  @include hover(transform, translateX(-50%) scale(1.2));
 }

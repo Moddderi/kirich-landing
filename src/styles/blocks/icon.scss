@@ -48,22 +48,41 @@
   }
 
   &--acount {
-    background-image: url(../img/icons/acount.svg);
+    background-image: url(../img/icons/icon-acount.svg);
 
     @include hover(transform, scale(1.2));
 
-    width: 24px;
-    height: 24px;
   }
 
-  &--arrow-down {
-    background-image: url(../img/icons/arrow-down.svg);
+  &--contact {
+    background-image: url(../img/icons/icon-contact.svg);
 
     @include hover(transform, scale(1.2));
 
-    width: 16px;
-    height: 16px;
-    margin-left: 4px;
+  }
+
+  &--bag {
+    background-image: url(../img/icons/icon-bag.svg);
+
+    @include hover(transform, scale(1.2));
 
   }
+
+  &--file-person {
+    background-image: url(../img/icons/icon-file-person.svg);
+
+    @include hover(transform, scale(1.2));
+
+  }
+
+  // &--arrow-down {
+  //   background-image: url(../img/icons/arrow-down.svg);
+
+  //   @include hover(transform, scale(1.2));
+
+  //   width: 16px;
+  //   height: 16px;
+  //   margin-left: 4px;
+
+  // }
 }

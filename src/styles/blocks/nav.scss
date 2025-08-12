@@ -5,7 +5,11 @@
     gap: 32px;
 
     margin: 0;
-    padding: 80px;
+    padding: 40px;
+
+    @include on-tablet {
+      padding: 80px;
+    }
 
     list-style: none;
   }
@@ -36,14 +40,29 @@
 
     position: relative;
 
-    font-size: 22px;
-    line-height: 22px;
+    font-size: 18px;
+    line-height: 18px;
     color: inherit;
     text-decoration: none;
     letter-spacing: 2px;
 
+    @include on-tablet {
+      font-size: 36px;
+      line-height: 36px;
+    }
+
     &:hover .nav__text::after {
       transform: scaleX(1);
+    }
+
+     .icon {
+      width: 20px;
+      height: 20px;
+
+      @include on-tablet {
+        width: 26px;
+        height: 26px;
+      }
     }
   }
 

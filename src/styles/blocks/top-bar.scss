@@ -4,20 +4,24 @@
   justify-content: space-between;
   align-items: center;
 
-  height: 100px;
+  height: 110px;
   background: $top-bar-background-color;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
 
   @include content-padding-inline;
 
+  @include on-tablet {
+    height: 140px;
+  }
+
   &__logo {
-    height: 75px;
+    height: 80px;
     user-select: none;
 
     @include hover(transform, scale(1.2));
 
     @include on-tablet {
-      height: 90px;
+      height: 120px;
     }
   }
 
@@ -27,16 +31,28 @@
     transform: translateX(-50%);
   }
 
+  .icon {
+    width: 26px;
+    height: 26px;
+
+    @include on-tablet {
+      width: 36px;
+      height: 36px;
+    }
+  }
 
   &__icons--left,
   &__icons--right {
     display: flex;
     align-items: center;
     gap: 24px; // расстояние между иконками
+
+    @include on-tablet {
+      gap: 42;
+    }
   }
 
   &.menu__top {
     background: $menu-background-color;
-
   }
 }
