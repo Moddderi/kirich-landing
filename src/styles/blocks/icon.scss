@@ -75,6 +75,42 @@
 
   }
 
+  &--instagram {
+    background-image: url(../img/icons/icon-instagram.svg);
+
+    @include hover(transform, scale(1.2));
+  }
+
+  &--facebook {
+    background-image: url(../img/icons/icon-facebook.svg);
+
+    @include hover(transform, scale(1.2));
+  }
+
+  &--telegram {
+    background-image: url(../img/icons/icon-telegram.svg);
+
+    @include hover(transform, scale(1.2));
+  }
+
+  &--whatsapp {
+    background-image: url(../img/icons/icon-whatsapp.svg);
+
+    @include hover(transform, scale(1.2));
+  }
+
+  &--viber {
+    background-image: url(../img/icons/icon-viber.svg);
+
+    @include hover(transform, scale(1.2));
+  }
+
+  &--geo {
+    background-image: url(../img/icons/icon-geo.svg);
+
+    @include hover(transform, scale(1.2));
+  }
+
   // &--arrow-down {
   //   background-image: url(../img/icons/arrow-down.svg);
 

@@ -5,10 +5,10 @@
     gap: 32px;
 
     margin: 0;
-    padding: 40px;
+    padding: $mobile-nav-padding;
 
     @include on-tablet {
-      padding: 80px;
+      padding: $tablet-nav-padding;
     }
 
     list-style: none;
@@ -47,15 +47,15 @@
     letter-spacing: 2px;
 
     @include on-tablet {
-      font-size: 36px;
-      line-height: 36px;
+      font-size: 30px;
+      line-height: 30px;
     }
 
     &:hover .nav__text::after {
       transform: scaleX(1);
     }
 
-     .icon {
+    .icon {
       width: 20px;
       height: 20px;
 
@@ -70,5 +70,39 @@
     width: 100%;
     height: 1px;
     background-color: black;
+  }
+
+  &__social {
+    display: flex;
+    gap: 26px;
+
+    padding: $mobile-nav-padding;
+
+    @include on-tablet {
+      padding: $tablet-nav-padding;
+    }
+  }
+
+  &__telephone {
+    font-size: 20px;
+    padding-left: 40px;
+
+    @include on-tablet {
+      padding-left: 45px;
+    }
+
+    transform-origin: left center; // масштабируем относительно левого центра
+
+    @include hover(transform, scale(1.2));
+  }
+
+  &__place {
+    display: flex;
+    padding: 30 0 0 40px;
+
+    .nav__text {
+      font-size: 20px;  // здесь указываешь нужный размер
+      line-height: 1.2; // если нужно, можно скорректировать межстрочный интервал
+    }
   }
 }
