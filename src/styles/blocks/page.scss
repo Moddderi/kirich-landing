@@ -23,6 +23,8 @@
     transition: all 0.3s;
 
     &:target {
+      overflow-y: scroll;
+      min-height: 100vh;
       pointer-events: all;
       transform: translateX(0);
       opacity: 1;

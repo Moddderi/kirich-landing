@@ -9,22 +9,28 @@
   }
 
   &__picture {
-    position: relative;
-    flex: 1;
-    background-size: cover;
-    background-position: top center;
-    background-repeat: no-repeat;
     cursor: pointer;
+
+    position: relative;
+
     overflow: hidden;
+    flex: 1;
+
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
 
     &::after {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background-color: rgba(0, 0, 0, 0); // прозрачный
-      transition: background-color 0.3s ease;
-      z-index: 1;
       pointer-events: none;
+      content: "";
+
+      position: absolute;
+      z-index: 1;
+      inset: 0;
+
+      background-color: rgba(0, 0, 0, 0); // прозрачный
+
+      transition: background-color 0.3s ease;
     }
 
     &:hover::after {
@@ -42,18 +48,20 @@
   }
 
   &__label {
+    pointer-events: auto;
+    cursor: pointer;
+
     position: absolute;
+    z-index: 2;
     bottom: 33%;
     left: 50%;
     transform: translateX(-50%);
-    z-index: 2;
-    color: $header-text-color;
+
     font-size: 28px;
     font-weight: 600;
-    text-transform: uppercase;
+    color: $header-text-color;
     text-shadow: 0 0 8px rgba(0, 0, 0, 0.7);
-    pointer-events: auto;
-    cursor: pointer;
+    text-transform: uppercase;
 
     @include on-tablet {
       font-size: 48px;

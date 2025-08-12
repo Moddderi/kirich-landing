@@ -8,6 +8,9 @@
 
   background: $menu-background-color;
 
+    overflow-y: auto;  // Добавляем вертикальную прокрутку
+
+
   &__top {
     margin-bottom: 24px;
 
