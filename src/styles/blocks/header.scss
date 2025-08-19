@@ -45,6 +45,10 @@
 
   &__picture--type-latin {
     background-image: url("../img/header-right-latin.svg");
+
+    @media (max-width: 575px) {
+      background-position: left 40% bottom 45%;
+    }
   }
 
   &__label {

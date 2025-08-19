@@ -1,0 +1,59 @@
+.info {
+  @include page-grid;
+
+  @include content-padding-inline;
+
+  height: auto;
+  padding-block: 40px;
+  background-image: url(../img/bg-main.png);
+  background-repeat: no-repeat;
+  background-position: 100% center;
+  background-size: cover;
+  box-shadow: 0 4px 6px -2px rgba(0, 0, 0, 0.2);
+
+  align-items: start; // вертикаль
+  justify-items: center; // горизонталь
+  // text-align: center;
+
+  @include on-tablet {
+    align-items: center;
+    height: 100vh;
+    background-position: 60% center;
+  }
+
+  &__slogan {
+    color: $main-text-color;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 1.5;
+
+    grid-column: 1 / -1;
+
+    @include on-tablet {
+      font-size: 32px;
+      grid-column: 1 / 4;
+    }
+
+    @include on-desktop {
+      font-size: 38px;
+      grid-column: 1 / 6;
+    }
+  }
+
+  &__text {
+    color: $main-text-color;
+    font-size: 18px;
+    line-height: 1.1;
+
+    grid-column: 1 / -1;
+
+    @include on-tablet {
+      font-size: 26px;
+      grid-column: 5 / 7;
+    }
+
+    @include on-desktop {
+      grid-column: 8 / 12;
+    }
+  }
+}

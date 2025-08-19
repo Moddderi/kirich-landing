@@ -1,33 +1,35 @@
 .main {
-  display: flex;
-  gap: 20px;
-  align-items: center;  // по центру вертикали
-  justify-content: space-between; // левый и правый блоки
+  // display: flex;
+  // gap: 20px;
+  // align-items: center;  // по центру вертикали
+  // justify-content: space-between; // левый и правый блоки
 
-  height: 100vh;
+  // @include content-padding-inline;
 
-  background-image: url(../img/bg-main.png);
-  background-repeat: no-repeat;
-  background-position: 60% center;
-  background-size: cover;
-  box-shadow: 0 4px 6px -2px rgba(0, 0, 0, 0.2);
+  // &__text {
+  //   display: flex;
+  //   flex-direction: column;
+  //   justify-content: center; // центрируем по высоте
 
-  @include content-padding-inline;
+  //   max-width: 45%;
 
-  &__text {
-    display: flex;
-    flex-direction: column;
-    justify-content: center; // центрируем по высоте
+  //   font-size: 24px;
+  //   font-weight: bold;
+  //   color: #fff;
 
-    max-width: 45%;
+  //   &--slogan {
+  //     font-size: 38px;
+  //     line-height: 1.5;
+  //   }
+  // }
 
-    font-size: 24px;
-    font-weight: bold;
-    color: #fff;
+  &__content {
+    display: grid;
+    row-gap: 92px;
+    color: #000;
 
-    &--slogan {
-      font-size: 38px;
-      line-height: 1.5;
+    @include on-tablet {
+      row-gap: 120px;
     }
   }
 }
