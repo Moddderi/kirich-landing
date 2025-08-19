@@ -1,0 +1,33 @@
+.main {
+  background-image: url(../img/bg-main.png);
+  height: 100vh;
+
+  display: flex;
+  gap: 20px;
+  align-items: center;  // по центру вертикали
+  justify-content: space-between; // левый и правый блоки
+
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 60% center;
+
+  box-shadow: 0 4px 6px -2px rgba(0, 0, 0, 0.2);
+
+  @include content-padding-inline;
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; // центрируем по высоте
+    max-width: 45%;
+
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+
+    &--slogan {
+      font-size: 38px;
+      line-height: 1.5;
+    }
+  }
+}
